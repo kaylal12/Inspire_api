@@ -40,6 +40,6 @@ class ProfilesController < OpenReadController
   end
 
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :description)
+    params.require(:profile).permit(:first_name, :last_name, :description, :profile_picture)
   end
 end

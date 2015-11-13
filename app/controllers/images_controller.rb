@@ -38,6 +38,6 @@ class ImagesController < OpenReadController
   end
 
   def image_params
-    params.require(:images).permit(:caption, :profile_id)
+    params.require(:images).permit(:caption, :image_post, :profile_id)
   end
 end

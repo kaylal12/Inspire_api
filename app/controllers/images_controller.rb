@@ -29,6 +29,7 @@ class ImagesController < OpenReadController
 
   def destroy
     @image.destroy
+    head :no_content
   end
 
   private

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :users, except: [:new, :edit]
 
   resources :profiles, except: [:new, :edit]
+
+  resources :images, except: [:new, :edit]
 end

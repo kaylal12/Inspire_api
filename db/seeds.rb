@@ -14,7 +14,10 @@
 
 User.delete_all
 Profile.delete_all
+Image.delete_all
 
 kayla = User.create!(email: 'kayla@kay.com', password: 'kayla', password_confirmation: 'kayla')
 
 kayla.create_profile(first_name: 'Kayla', last_name: 'Lei', description: 'I like to draw')
+
+kayla.profile.images.create!(caption: 'Inktober Day 1')

@@ -1,3 +1,3 @@
-class Image < OpenReadController
+class Image < ActiveRecord::Base
   belongs_to :profile
 end

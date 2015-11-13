@@ -1,5 +1,6 @@
 class Profile < ActiveRecord::Base
   belongs_to :user, autosave: true
+  has_many :images
 
   has_attached_file :profile_picture,
               :styles => { :medium => "300x300>", :thumb => "100x100>" },

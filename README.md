@@ -1,64 +1,14 @@
 
-# User authentication
+# Project 2 -Inspire App API
 
-## Register
+## Overview
 
-```
-curl --include --request POST --header "Content-Type: application/json" -d '{
-  "credentials": {
-    "email": "an@example.email",
-    "password": "an example password",
-    "password_confirmation": "an example password"
-  }
-}' http://localhost:3000/register
-```
+This is the backend to my web application 'Inspire' created using Ruby on Rails.
 
-## Login
+Read more about the application here:
+[Inspire Frontend Repo](http://github.com/kaylal12/Inspire_frontend/)
 
-```
-curl --request POST --header "Content-Type: application/json" -d '{
-  "credentials": {
-    "email": "an@example.email",
-    "password": "an example password"
-  }
-}' http://localhost:3000/login
-```
+Checkout the application here:
+[Inspire](http://kaylal12.github.io/Inspire_frontend/)
 
-## Logout
 
-```
-curl --request DELETE --header "Authorization: Token token=c017d611187e3350baffc52d35a4df69" http://localhost:3000/logout/1
-```
-
-# Users
-
-## List
-
-```
-curl --header "Authorization: Token token=c017d611187e3350baffc52d35a4df69" http://localhost:3000/users
-```
-
-# Books
-
-## List
-
-```
-curl --header "Authorization: Token token=c017d611187e3350baffc52d35a4df69" http://localhost:3000/users
-```
-
-**OR**
-
-```
-curl http://localhost:3000/users
-```
-
-## Create
-
-```
-curl --request POST --header "Authorization: Token token=be249dc0231396806f24c953cafae03a" --header "Content-Type: application/json" -d '{
-  "book": {
-    "title":"The Hold",
-    "isbn":"abc123def456"
-  }
-}'  http://localhost:3000/books
-```

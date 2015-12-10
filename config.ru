@@ -6,7 +6,7 @@ run Rails.application
 use Rack::Cors do
   allow do
     origins 'localhost:3000', '127.0.0.1:3000',
-            /github\.io/
+            '/github\.io/'
             # regular expressions can be used here
 
     resource '/file/list_all/', :headers => 'x-domain-token'

@@ -2,8 +2,6 @@ class Image < ActiveRecord::Base
   belongs_to :profile
 
   has_attached_file :image_post,
-  s3_file_path ="cards/ais/000/000/#{format("%03d", card.id)}/original/#{card.ai_file_name}"
-              :path => "images/:user/image_post/:id_partition/:file_name.:extension"
               :styles => { :medium => "500x500>", :thumb => "300x300>" },
               :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image_post, :content_type => /\Aimage\/.*\Z/
